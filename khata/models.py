@@ -25,7 +25,7 @@ class Post(models.Model):
     phone = models.CharField(max_length=10, blank=True)
     price = models.DecimalField(max_digits=15, decimal_places=2, default=0.0)
     address = models.CharField(max_length=250, blank=True)
-    year = models.DateTimeField()
+    year = models.DateField()
     area = models.DecimalField(max_digits=15, decimal_places=2, default=0.0)
     excerpt = models.TextField(null=True)
     content = models.TextField()
