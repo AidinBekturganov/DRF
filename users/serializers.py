@@ -1,5 +1,15 @@
 from rest_framework import serializers
 from users.models import NewUser
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = ['first_name']
+        model = User
+
 
 
 class CustomUserSerializer(serializers.ModelSerializer):
